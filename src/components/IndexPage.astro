@@ -9,15 +9,19 @@ import background from '../assets/background.svg';
 		<p>欢迎来到这个博客站点</p>
 		<p>这个站点是以下两人维护的</p>
 		<div id="authors">
-			<div class="author">
-				<img src="https://avatars.githubusercontent.com/u/258399920?v=4&size=512 " alt="zhiyuHD`s avatar" class="avatar">
-				<p>zhiyuHD</p>
-			</div>
-			<div class="author">
-				<img src="https://avatars.githubusercontent.com/u/195563565?size=512 " alt="InverseLight`s avatar" class="avatar">
-				<p>InverseLight</p>
-			</div>
-		</div>
+      <div class="author">
+        <a href="https://github.com/zhiyuHD" target="_blank" rel="noopener noreferrer">
+            <img src="https://avatars.githubusercontent.com/u/258399920?v=4&size=512" alt="zhiyuHD's avatar" class="avatar">
+              <p>zhiyuHD</p>
+        </a>
+      </div>
+      <div class="author">
+        <a href="https://github.com/WaterMagent" target="_blank" rel="noopener noreferrer">
+            <img src="https://avatars.githubusercontent.com/u/195563565?size=512" alt="InverseLight's avatar" class="avatar">
+            <p>InverseLight</p>
+        </a>
+      </div>
+    </div>
 		<p>欢迎加友链～</p>
 	</div>
 </div>
@@ -97,5 +101,17 @@ import background from '../assets/background.svg';
 	margin: 8px 0 0 0; /* 调整文字与头像的间距 */
 	text-align: center; /* 文字居中 */
 	font-size: 0.9em;
+}
+
+.author a {
+    text-decoration: none;  /* 去除下划线 */
+    color: inherit;         /* 继承父元素的颜色（默认黑色） */
+}
+
+/* 可选：鼠标悬停时的效果 */
+.author a:hover {
+    opacity: 0.8;           /* 悬停时稍微变透明 */
+    /* 或者使用其他效果，比如： */
+    /* color: #666; */
 }
 </style>
