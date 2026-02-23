@@ -1,0 +1,37 @@
+---
+const navItems = [
+  { href: '/', label: '首页', icon: 'home' },
+  { href: '/blog', label: '文章', icon: 'article' },
+  { href: '/about', label: '关于', icon: 'person' },
+];
+---
+
+<mdui-top-app-bar style="position: sticky; top: 0; z-index: 1000;">
+  <mdui-button-icon icon="menu" id="menu-btn"></mdui-button-icon>
+  <mdui-top-app-bar-title>MD3 Blog</mdui-top-app-bar-title>
+  <div style="flex-grow: 1;"></div>
+  
+  {navItems.map(item => (
+    <a href={item.href} style="text-decoration: none; color: inherit;">
+      <mdui-button-icon icon={item.icon} title={item.label}></mdui-button-icon>
+    </a>
+  ))}
+  
+
+<mdui-navigation close-on-overlay-click id="drawer" style="z-index: 999;">
+  <mdui-list>
+    {navItems.map(item => (
+      <a href={item.href} style="text-decoration: none; color: inherit;">
+        <mdui-list-item icon={item.icon}>{item.label}</mdui-list-item>
+      </a>
+    ))}
+  </mdui-list>
+</mdui-navigation>
+
+<script>
+  // 菜单按钮控制抽屉
+  const menuBtn = document.getElementById('menu-btn');
+  const drawer = document.getElementById('drawer');
+  
+  
+</script>

@@ -1,0 +1,101 @@
+---
+import astroLogo from '../assets/astro.svg';
+import background from '../assets/background.svg';
+---
+
+<div id="container">
+	<div id="site">
+		<h1>你好!</h1>
+		<p>欢迎来到这个博客站点</p>
+		<p>这个站点是以下两人维护的</p>
+		<div id="authors">
+			<div class="author">
+				<img src="https://avatars.githubusercontent.com/u/258399920?v=4&size=512 " alt="zhiyuHD`s avatar" class="avatar">
+				<p>zhiyuHD</p>
+			</div>
+			<div class="author">
+				<img src="https://avatars.githubusercontent.com/u/195563565?size=512 " alt="InverseLight`s avatar" class="avatar">
+				<p>InverseLight</p>
+			</div>
+		</div>
+		<p>欢迎加友链～</p>
+	</div>
+</div>
+
+<style>
+* {
+	font: 16px Roboto, sans-serif;
+}
+
+#container {
+	background: black;
+	background-size: cover;
+	color: white;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 20px;
+}
+
+#site {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	background-color: #36363680;
+	border-radius: 8px;
+	padding: 10px 20px;
+	width: 25%;
+	height: 50%;
+}
+
+#site h1 {
+	font-size: 2em;
+	margin-bottom: 10px;
+	text-align: left;
+	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+}
+
+#site p {
+	font-size: 1em;
+	margin-bottom: 10px;
+	text-align: left;
+	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+}
+
+#authors {
+	background-color: #36363640;
+	border-radius: 8px;
+	padding: 10px;
+	display: flex;
+	flex-direction: row; /* 明确指定水平排列 */
+	gap: 20px;
+	align-items: center; /* 垂直居中对齐 */
+}
+
+.author {
+	background-color: #54545480;
+	border-radius: 8px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column; /* 内部元素垂直排列：头像在上，名字在下 */
+	align-items: center; /* 内部元素水平居中 */
+	min-width: 100px; /* 最小宽度而不是固定宽度 */
+	/* 移除固定高度，让内容决定高度 */
+}
+
+.author img {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+}
+
+.author p {
+	margin: 8px 0 0 0; /* 调整文字与头像的间距 */
+	text-align: center; /* 文字居中 */
+	font-size: 0.9em;
+}
+</style>
